@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCadastrodeEventos.views.Page01"
+             Title="Page01"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Azure">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+
+        <BoxView Grid.Row="0" BackgroundColor="Gray"/>
+        <Label Text="Cadastro de Eventos" TextColor="Azure" FontSize="25" FontFamily="inter_italic" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+
+
+        <Frame Grid.Row="1" BorderColor="Transparent" HeightRequest="450" WidthRequest="300" CornerRadius="12" BackgroundColor="Gray" Padding="0" >
+
+
+            <Grid RowDefinitions="*,*,*,*,*,*,*" >
+
+                <Label Text="Preencha as Informações!" TextColor="Black" FontSize="20" FontFamily="inter_italic" HorizontalTextAlignment="Center" Margin="0,35,0,0"/>
+
+                <Frame BorderColor="Transparent" HeightRequest="40" WidthRequest="270" BackgroundColor="Azure" Padding="0" Grid.Row="1" >
+                    <Entry  TextColor="Black" Text="NomeLocal" Placeholder="Nome do Evento" PlaceholderColor="Black"  FontFamily="inter_italic" x:Name="NomeLocal" />
+                </Frame>
+
+                <Picker TextColor="Black" Margin="0,0,0,10" HeightRequest="65" WidthRequest="270" x:Name="pck_local" Title="Selecione o Local do Evento" FontSize="16" TitleColor="Black" BackgroundColor="Azure" Grid.Row="2" ItemDisplayBinding="{Binding Descricao}"/>
+ 
+                <Label Text="Participantes" TextColor="Black"  Grid.Row="3" Margin="15,0,0,0" FontSize="16"  FontFamily="inter_italic"/>
+                <Frame BorderColor="Transparent" HeightRequest="40" WidthRequest="100" BackgroundColor="Azure" Padding="0" Grid.Row="3" Margin="0,20,170,0" >
+                    <Label  Text="{Binding Value}" BindingContext="{x:Reference stp_participantes}" TextColor="Black" Margin="0,15,0,0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" FontSize="19"/>
+                </Frame>
+                <Stepper x:Name="stp_participantes"  Grid.Row="3"  Minimum="1" Maximum="100" Increment="1" BackgroundColor="Black" Margin="130,20,0,0"/>
+
+
+
+
+                <Label Text="Inicio" TextColor="Black" FontSize="16" Grid.Row="4" Margin="15,0,0,0"  FontFamily="inter_italic"/>
+
+                <DatePicker x:Name="inicio" Format="dd/MM/yyyy" WidthRequest="120" HeightRequest="40" BackgroundColor="Azure" Margin="0,20,150,0"  TextColor="Black" Grid.Row="4" DateSelected="inicio_DateSelected"/>
+
+
+
+                <Label Text="Fim" TextColor="Black" FontSize="16" Grid.Row="5" Margin="15,0,0,0"  FontFamily="inter_italic" />
+                <DatePicker x:Name="fim" Format="dd/MM/yyyy" WidthRequest="120" HeightRequest="40" BackgroundColor="Azure" Margin="0,20,150,0"  TextColor="Black" Grid.Row="5" />
+
+
+                <Frame Grid.Row="6" HorizontalOptions="Center" Padding="0" WidthRequest="100" HeightRequest="45" BorderColor="Transparent" CornerRadius="10" >
+
+                    <Button Text="Avançar" Clicked="Button_Clicked" BackgroundColor="Orange"/>
+
+                </Frame>
+                
+                
+                
+                
+                
+                
+            </Grid>
+
+        </Frame>
+
+
+
+    </Grid>
+    
+</ContentPage>
+
+

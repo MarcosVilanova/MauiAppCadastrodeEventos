@@ -1,0 +1,1 @@
+C:\Users\Marco\Downloads\dev\AppCadastrodeEventos\AppCadastrodeEventos\AppCadastrodeEventos.csproj;x64

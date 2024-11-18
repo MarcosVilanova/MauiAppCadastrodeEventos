@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCadastrodeEventos.views.Page02"
+             Title="Page02" NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Azure">
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+
+        <BoxView Grid.Row="0" BackgroundColor="Gray"/>
+        <Label Text="Cadastro de Eventos" TextColor="Azure" FontSize="25" FontFamily="inter_italic" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+
+
+        <Frame Grid.Row="1" BorderColor="Transparent" HeightRequest="450" WidthRequest="300" CornerRadius="12" BackgroundColor="Gray" Padding="0" >
+
+
+            <Grid RowDefinitions="*,*,*,*,*,*" >
+
+                <Label Text="Cadastro Salvo!" TextColor="Black" FontSize="20" FontFamily="inter_italic" HorizontalTextAlignment="Center" Margin="0,35,0,0"/>
+
+                <Frame BorderColor="Transparent" HeightRequest="40" WidthRequest="270" BackgroundColor="Azure" Padding="0" Grid.Row="1" >
+                    <Label x:Name="lblNomeEvento" TextColor="Black"  FontFamily="inter_italic" Text="{Binding LocalSelecionado.Descricao}" />
+                </Frame>
+
+                <Frame BorderColor="Transparent" HeightRequest="40" WidthRequest="270" BackgroundColor="Azure" Padding="0" Grid.Row="2">
+                    <Label x:Name="lblLocalEvento" TextColor="Black" Text="{Binding NumParticipantes}" FontFamily="inter_italic" />
+                </Frame>
+
+                <Label Text="Participantes" TextColor="Black"  Grid.Row="3" Margin="15,0,0,0" FontSize="16"  FontFamily="inter_italic"/>
+                <Frame BorderColor="Transparent" HeightRequest="40" WidthRequest="110" BackgroundColor="Azure" Padding="0" Grid.Row="3" Margin="0,20,170,0" >
+                    <Label x:Name="lblParticipantes" Text="1"  TextColor="Black" Margin="0,15,0,0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" FontSize="19"/>
+                </Frame>
+
+                <Label Text="Inicio" TextColor="Black" FontSize="16" Grid.Row="4" Margin="15,0,0,0" FontFamily="inter_italic"/>
+                <Frame BorderColor="Transparent" HeightRequest="40" WidthRequest="110" BackgroundColor="Azure" Padding="0" Grid.Row="4" Margin="0,20,170,0" >
+                    <Label x:Name="lblInicio" Text="10/10/2028"  TextColor="Black" Margin="0,15,0,0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" FontSize="19"/>
+                </Frame>
+
+
+                <Label Text="Fim" TextColor="Black" FontSize="16" Grid.Row="5" Margin="15,0,0,0"  FontFamily="inter_italic" />
+                <Frame BorderColor="Transparent" HeightRequest="40" WidthRequest="110" BackgroundColor="Azure" Padding="0" Grid.Row="5" Margin="0,20,170,0" >
+                    <Label x:Name="lblFim" Text="10/09/2025"  TextColor="Black" Margin="0,15,0,0" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center" FontSize="19"/>
+                </Frame>
+
+
+
+
+
+
+
+            </Grid>
+
+        </Frame>
+
+
+
+    </Grid>
+
+</ContentPage>
